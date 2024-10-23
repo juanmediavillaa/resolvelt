@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <Header />
-      <RouterProvider router={router} />
+      <Services />
       <Footer />
     </div>
   );
