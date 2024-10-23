@@ -1,19 +1,22 @@
 import React from 'react';
 import Header from './components/Header';
-import MainSection from './components/MainSection';
-import MissionSection from './components/MissionSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import FeaturesSection from './components/FeaturesSection';
+import Index from './components/Index';
+import About from './components/About';
+import Services from './components/Services';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
+
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route path="/" element={<Services/>} />,
+));
 
 function App() {
   return (
     <div>
       <Header />
-      <MainSection />
-      <MissionSection />
-      <TestimonialsSection />
-      <FeaturesSection />
+      <RouterProvider router={router} />
       <Footer />
     </div>
   );
